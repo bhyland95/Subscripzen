@@ -1,5 +1,5 @@
 
-const Category = require('./Category');
+const Subscription = require('./Subsciptions')
 
 
-module.exports = { Category };
+module.exports = { Subscription };
