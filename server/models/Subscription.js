@@ -1,7 +1,6 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat.js');
 
-const { Schema } = mongoose;
 
 const subscriptionSchema = new Schema({
   name: {
@@ -22,7 +21,7 @@ const subscriptionSchema = new Schema({
   }
 });
 
-const Subscription = mongoose.model('Subscription', subscriptionSchema);
+const Subscription = model('Subscription', subscriptionSchema);
 
 module.exports = Subscription;
 
