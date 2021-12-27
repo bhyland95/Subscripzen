@@ -1,5 +1,5 @@
 const User = require('./User');
-const Subscription = require('./Subscription')
+const Subscription = require('./Subscription');
 
 
-module.exports = { Subscription, User};
+module.exports = { User,  Subscription };
