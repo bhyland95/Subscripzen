@@ -139,3 +139,29 @@ const Subscription = () => {
       </div>
       </Box>
       </Grid>
+<div>
+        <Modal
+          aria-labelledby="New Subscription"
+          aria-describedby="new-subscription"
+          className={classes.modal}
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <div className={classes.paper}>
+              <NewSubscription />
+            </div>
+          </Fade>
+        </Modal>
+      </div>
+      </Container>
+    </div>
+  );
+};
+
+export default Subscription;
