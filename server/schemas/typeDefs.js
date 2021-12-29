@@ -1,60 +1,44 @@
+// import the gql tagged template function
 const { gql } = require('apollo-server-express');
 
+// create our typeDefs
 const typeDefs = gql`
-  type Category {
+type User {
     _id: ID
-    name: String
-  }
-
-  type Product {
-    _id: ID
-    name: String
-    description: String
-    image: String
-    quantity: Int
-    price: Float
-    category: Category
-  }
-
-  type Order {
-    _id: ID
-    purchaseDate: String
-    products: [Product]
-  }
-
-  type User {
-    _id: ID
-    firstName: String
-    lastName: String
+    username: String
     email: String
-    orders: [Order]
+    friendCount: Int
+    subscriptions: [Subscription]
   }
-
+  type Subscription {
+    _id: ID
+    name: String
+    amount: Float
+    nextCharge: String
+  }
+  type Reaction {
+    _id: ID
+    reactionBody: String
+    createdAt: String
+    username: String
+  }
   type Auth {
-    token: ID
+    token: ID!
     user: User
   }
-
   type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    user: User
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    me: User
+    users: [User]
+    user(username: String!): User
+    subscriptions(username: String): [Subscription]
+    subscription(_id: ID!): Subscription
   }
-
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
-  }
-
-  type Checkout {
-    session: ID
+    addUser(username: String!, email: String!, password: String!): Auth
+    addSubscription( name: String!, amount: Float!, nextCharge: String!): Subscription
   }
 `;
 
+// export the typeDefs
 module.exports = typeDefs;
