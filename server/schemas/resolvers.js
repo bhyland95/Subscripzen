@@ -65,7 +65,7 @@ const resolvers = {
 
                 await User.findByIdAndUpdate(
                     { _id: context.user._id },
-                    { $push: { subscriptions: subscription._id } },
+                    { $push: { subscriptions: subscription } },
                     { new: true }
                 );
 
