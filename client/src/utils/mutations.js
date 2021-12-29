@@ -23,6 +23,14 @@ export const ADD_USER = gql`
   `;
 
 export const ADD_SUBSCRIPTION = gql`
+mutation addSubscription($name: String!, $amount: Float!, $nextCharge: String!) {
+  addSubscription(name: $name, amount: $amount, nextCharge: $nextCharge) {
+    _id
+    name
+    amount
+    nextCharge
+  }
+}
 `;
 
 export const REMOVE_SUBSCRIPTION = gql`
