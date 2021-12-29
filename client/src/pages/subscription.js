@@ -39,11 +39,7 @@ const Subscription = () => {
       .then((res) => {
         const subs = res.data.subscriptions;
         setSubscriptions(subs);
-        // for (let i = 0; i < subs.length; i++) {
-        //   const element = subs[i];
-        //   console.log(element);
-        // }
-        // setSubscription(element);
+       
       })
       .catch((err) => {
         console.log(err);
@@ -63,3 +59,83 @@ const Subscription = () => {
   }
 
   const classes = useStyles();
+
+   return (
+    <div>
+      <h1 className={classes.title}>Subscripzen - Subscriptions!</h1>
+      <hr style={{ width: '50%'}}></hr>
+      <Container component={Paper}>
+        <Grid item xs={6}>
+        <List className={classes.newSub}>
+        <ListItemIcon><h1 className={classes.center1}>Subscriptions</h1></ListItemIcon>
+        <ListItemIcon onClick={handleOpen} className={classes.button1}>
+          <AddCircleIcon />
+          <ListItemText color="primary" primary="Add a new Subscription" />
+        </ListItemIcon>
+      </List>
+        </Grid>
+      <Grid className={classes.root1} container direction="row" justify="center" alignItems="center">
+        <Grid item xs>
+          <div>
+            {subscriptions.length ? (
+              <div>
+                
+                <TableContainer padding="checkbox">
+                  <Table
+                    className={classes.table}
+                    aria-labelledby="tableTitle"
+                    aria-label="enhanced table"
+                  >
+                    <TableHead>
+                      <TableRow>
+                        <StyledTableCell>Name</StyledTableCell>
+                        <StyledTableCell>Cost</StyledTableCell>
+                        <StyledTableCell>Rating</StyledTableCell>
+                        <StyledTableCell>Start Date</StyledTableCell>
+                        <StyledTableCell></StyledTableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {subscriptions.map((sub) => (
+                        <StyledTableRow>
+                          <TableCell>{sub.SubscriptionName}</TableCell>
+                          <TableCell>${sub.cost}</TableCell>
+                          <TableCell>{sub.rating}</TableCell>
+                          <TableCell>{sub.startDate}</TableCell>                       
+                          <TableCell>
+                            {' '}
+                            <Button
+                              data-id={sub._id}
+                              variant="contained"
+                              color="inherit"
+                              className={classes.button2}
+                              onClick={() => deleteSubscription(sub._id)}
+                            >
+                              Delete
+                            </Button>
+                          </TableCell>
+                        </StyledTableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </div>
+            ) : (
+              <h3 className={classes.title}>No Results to Display</h3>
+            )}
+          </div>
+        </Grid>
+      </Grid>
+      
+      <Grid container direction="row" justify="center" alignItems="center">
+      <Box display={{ xs: 'block', xl: 'none' }}>
+      <div className={classes.playerwrapper}>
+        <ReactPlayer
+          className={classes.reactplayer}
+          height="50vh"
+          width="50vh"
+          url={url}
+        />
+      </div>
+      </Box>
+      </Grid>
