@@ -2,10 +2,10 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
-import Nav from './components/Nav'
+import NavBar from './components/Nav'
 import './App.css'
 
-import Header from './components/Header';
+import Header from './pages/Header';
 import Home from './pages/Home';
 
 const httpLink = createHttpLink({
@@ -33,7 +33,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
 
-          <Nav />
+          <NavBar />
           <Header />
           <div className="container">
             <Switch>

@@ -12,3 +12,13 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
+  .nav-item {
+    padding-left: 70px;
+  }
+
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
