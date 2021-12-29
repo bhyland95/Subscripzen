@@ -2,7 +2,8 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
-
+import Nav from './components/Nav'
+import './App.css'
 
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -31,11 +32,13 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
+
+          <Nav />
           <Header />
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route component= {Home} />
+              <Route component={Home} />
             </Switch>
           </div>
         </div>
