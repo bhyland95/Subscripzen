@@ -2,7 +2,7 @@ import React from 'react';
 
 
 function NavBar(props) {
-    const tabs = ['Home', 'X', 'Y', 'Z', 'AA'];
+    const tabs = ['Home', 'Subscription', 'Y', 'Z', 'Add'];
     return (
         <header className="app-header">
 

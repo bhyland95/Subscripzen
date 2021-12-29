@@ -1,4 +1,5 @@
 import React from 'react';
+import HmSpending from './HmSpending';
 
 // import Header from '../components/Header'
 
@@ -9,10 +10,14 @@ const Home = () => {
 
             <main>
                 <div>
-                    Hello World!
+                    <h2>Monthly Spending: insert calculated number</h2>
+                    <br></br>
+                    <h2>Cancel and Save - link to save money page </h2>
+
                 </div>
 
             </main>
+            <HmSpending></HmSpending>
         </div>
     );
 };
