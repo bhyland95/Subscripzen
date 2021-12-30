@@ -1,29 +1,36 @@
-import { gql } from 'graphql-tag';
+import { gql } from '@apollo/client';
 
-export const LOGIN = gql`
-mutation login($email: String!, $password: String!) {
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
       user {
-        email
+        _id
+        username
       }
     }
   }
-  `;
+`;
 
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
       token
-        user {
-          email
+      user {
+        _id
+        username
       }
     }
   }
-  `;
-
-export const ADD_SUBSCRIPTION = gql`
 `;
 
-export const REMOVE_SUBSCRIPTION = gql`
-`;
+export const ADD_SUB = gql`
+  mutation addSubscription($name: String!, $amount: Float!, $nextCharge: String!) {
+    addSubscription(name: $name, amount: $amount, nextCharge: $nextCharge) {
+      _id
+      name
+      amount
+      nextCharge
+    }
+  }
+`
