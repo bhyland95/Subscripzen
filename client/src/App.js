@@ -10,7 +10,7 @@ import NavBar from './components/NavBar';
 import Nav from './components/Nav'
 
 
-import Home from './pages/Home';
+
 
 import Login from './pages/Login';
 import Signup from './pages/Signup';

@@ -41,7 +41,7 @@ const handleFormSubmit = async event => {
   };
 
   return (
-    <main className='flex-row justify-center mb-4'>
+    <main className='flex-row justify-center mb-4 loginId'>
       <div className='col-12 col-md-6'>
         <div className='card'>
           <h4 className='card-header'>Login</h4>
@@ -49,7 +49,7 @@ const handleFormSubmit = async event => {
             <form onSubmit={handleFormSubmit}>
               <input
                 className='form-input'
-                placeholder='Your email'
+                placeholder='Email'
                 name='email'
                 type='email'
                 id='email'
@@ -58,7 +58,7 @@ const handleFormSubmit = async event => {
               />
               <input
                 className='form-input'
-                placeholder='******'
+                placeholder='Password'
                 name='password'
                 type='password'
                 id='password'

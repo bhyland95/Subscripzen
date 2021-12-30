@@ -4,7 +4,7 @@ import React from 'react';
 const HmSpending = () => {
 
   return (
-    <div>
+    <div className="userSpending">
       <h3>Name: name of subscrition </h3>
       <br></br>
       <h3>Amount: $ amount </h3>
