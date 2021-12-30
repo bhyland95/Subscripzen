@@ -1,9 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 
 const subList = ({ subscriptions }) => {
 
+function byDate(a, b) {
+  return new Date(a.nextCharge).valueOf() - new Date(b.nextCharge).valueOf();
+}
+
+  // console.log(subscriptions.sort(byDate))
 
   if (!subscriptions.length) {
     return <h3>No Subscriptions Yet</h3>;
@@ -19,7 +24,9 @@ const subList = ({ subscriptions }) => {
             <p>{subscription.amount}</p>
             <p>{subscription.nextCharge}</p>
           </div>
-        ))}
+        ))
+        }
+
     </div>
 
   );
