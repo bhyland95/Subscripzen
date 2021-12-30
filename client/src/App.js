@@ -6,8 +6,6 @@ import Header from './components/Header'
 import './App.css'
 
 import Home from './pages/Home';
-import NavBar from './components/NavBar';
-import Nav from './components/Nav'
 
 
 
@@ -36,17 +34,21 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+ 
+
   return (
+    
     <ApolloProvider client={client}>
 
-      <Router>
+      <Router forceRefresh={true}>
         <div className="flex-column justify-flex-start min-100-vh">
 
           <Header />
 
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route  exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/addsub" component={AddSub} />

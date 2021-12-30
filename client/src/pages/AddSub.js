@@ -28,6 +28,7 @@ const AddSub = () => {
             });
 
             setFormState('','','')
+            window.location.assign('/')
         } catch (e) {
             console.error(e);
         }

@@ -11,10 +11,12 @@ const Header = () => {
         Auth.logout();
     };
 
+ 
+
     return (
         <header className="bg-secondary mb-4 py-2 flex-row align-center app-header">
             <div className="container flex-row justify-space-between-lg justify-center align-center nav">
-                <Link to="/">
+                <Link to="/" >
                     {/* <h1>Subscripzen</h1> */}
                     <img className="logo" src={Logo}></img>
 

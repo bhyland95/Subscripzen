@@ -23,11 +23,16 @@ const subscriptionSchema = new Schema(
     },
     {
         toJSON: {
-            getters: true
+            getters: true,
+            virtuals: true
         }
     }
 );
 
+
+// subscriptionSchema.virtual('total').get(function() {
+//     return this.amount.reduce((acc, doc) => acc + doc.points, 0);
+// });
 
 
 const Subscription= model('Subscription', subscriptionSchema);

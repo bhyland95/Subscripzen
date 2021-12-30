@@ -26,11 +26,14 @@ type User {
     token: ID!
     user: User
   }
+
+
+
   type Query {
     me: User
     users: [User]
     user(username: String!): User
-    subscriptions(username: String): [Subscription]
+    subscriptions( username: String): [Subscription]
     subscription(_id: ID!): Subscription
   }
   type Mutation {
