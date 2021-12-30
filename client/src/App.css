@@ -58,16 +58,16 @@ background-color: #FBEEF9;
   align-items: center;
 }
 
+
 .userSpending {
   border: 3px solid #FBEEF9;
   margin-top: 3%;
 }
 
-/* .loginId {
+
+.form-input {
   display: flex;
   flex-direction: column;
+  
 }
 
-.card {
-  flex-direction: column;
-} */
