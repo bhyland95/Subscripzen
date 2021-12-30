@@ -20,18 +20,18 @@ const Login = (props) => {
 
   // submit form
   // submit form
-const handleFormSubmit = async event => {
-  event.preventDefault();
+  const handleFormSubmit = async event => {
+    event.preventDefault();
 
-  try {
-    const { data } = await login({
-      variables: { ...formState }
-    });
-  
-    Auth.login(data.login.token);
-  } catch (e) {
-    console.error(e);
-  }
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
 
     // clear form values
     setFormState({
@@ -41,15 +41,15 @@ const handleFormSubmit = async event => {
   };
 
   return (
-    <main className='flex-row justify-center mb-4'>
-      <div className='col-12 col-md-6'>
+    <main className='loginId'>
+      <div >
         <div className='card'>
           <h4 className='card-header'>Login</h4>
           <div className='card-body'>
             <form onSubmit={handleFormSubmit}>
               <input
                 className='form-input'
-                placeholder='Your email'
+                placeholder='Email'
                 name='email'
                 type='email'
                 id='email'
@@ -58,7 +58,7 @@ const handleFormSubmit = async event => {
               />
               <input
                 className='form-input'
-                placeholder='******'
+                placeholder='Password'
                 name='password'
                 type='password'
                 id='password'
