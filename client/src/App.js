@@ -2,10 +2,19 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
+import Header from './components/Header'
+import './App.css'
 
-
-import Header from './components/Header';
 import Home from './pages/Home';
+import NavBar from './components/NavBar';
+import Nav from './components/Nav'
+
+
+
+
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import AddSub from './pages/AddSub';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -29,13 +38,21 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
+
           <Header />
+
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route component= {Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/addsub" component={AddSub} />
+
+
+              <Route component={Home} />
             </Switch>
           </div>
         </div>
