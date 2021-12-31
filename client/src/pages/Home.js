@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
 
-            <main>
+            <main >
                 <div className="spendingBox">
                     <div>
                         <h2 >Monthly Spending: insert calculated number</h2>
@@ -18,7 +18,7 @@ const Home = () => {
                 </div>
 
             </main>
-            <HmSpending></HmSpending>
+
         </div>
     );
 };

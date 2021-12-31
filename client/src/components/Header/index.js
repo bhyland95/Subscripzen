@@ -11,9 +11,9 @@ const Header = () => {
         Auth.logout();
     };
 
-    return (
-        <header className="bg-secondary mb-4 py-2 flex-row align-center app-header">
-            <div className="container flex-row justify-space-between-lg justify-center align-center nav">
+    return ( 
+        <header className="app-header">
+            <div className="nav">
                 <Link to="/">
                     {/* <h1>Subscripzen</h1> */}
                     <img className="logo" src={Logo}></img>
@@ -33,8 +33,8 @@ const Header = () => {
                     ) : (
                         <>
                             <div className="loginSignupBtn ">
-                                <Link className="btns" to="/login">Login</Link>
-                                <Link className="btns" to="/signup">Signup</Link>
+                                <Link className="btnCenter" to="/login">Login</Link>
+                                <Link className="btnCenter" to="/signup">Signup</Link>
                             </div>
                         </>
 
