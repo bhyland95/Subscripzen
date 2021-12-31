@@ -246,7 +246,6 @@ const Subscription = () => {
                       <TableRow>
                         <StyledTableCell>Name</StyledTableCell>
                         <StyledTableCell>Cost</StyledTableCell>
-                        <StyledTableCell>Rating</StyledTableCell>
                         <StyledTableCell>Start Date</StyledTableCell>
                         <StyledTableCell></StyledTableCell>
                       </TableRow>
