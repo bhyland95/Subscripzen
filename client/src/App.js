@@ -5,7 +5,10 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header'
 import './App.css'
 
+
+
 import Home from './pages/Home';
+import Subscription from './pages/subscription';
 import NavBar from './components/NavBar';
 import Nav from './components/Nav'
 
@@ -47,12 +50,15 @@ function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/subs" component={Subscription} />
+
+      
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/addsub" component={AddSub} />
 
 
-              <Route component={Home} />
+      
             </Switch>
           </div>
         </div>
