@@ -34,3 +34,15 @@ export const ADD_SUB = gql`
     }
   }
 `
+;
+
+ export const REMOVE_SUB = gql`
+  mutation removeSubscriptions($_id: ID!) {
+    removeSubscription(_id: $_id) {
+      _id
+      username
+      email
+    }
+  }
+ `
+ ;
