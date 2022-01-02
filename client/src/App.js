@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AddSub from './pages/AddSub';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -48,6 +49,8 @@ function App() {
 
           <div className="container">
             <Switch>
+            
+
               <Route  exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />

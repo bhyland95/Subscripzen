@@ -74,6 +74,10 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        updateSubscription: async (parent, { _id, name, amount, nextCharge}) => {
+      
+            return await Subscription.findByIdAndUpdate(_id, { name, amount, nextCharge }, { new: true });
+          },
        
     }
 };

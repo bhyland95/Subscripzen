@@ -10,11 +10,15 @@ const AddSub = () => {
 
     // update state based on form input changes
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        let { name, value } = event.target;
 
+        if(name === "amount" ){
+            value = parseFloat(value)
+        }
         setFormState({
             ...formState,
             [name]: value,
+
         });
     };
 

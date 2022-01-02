@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 
 
-const subList = ({ subscriptions }) => {
+const SubList = ({ subscriptions }) => {
+
+const [currentSubscriptions, setCurrentSubscriptions] = useState( [ ... subscriptions] )
 
 function byDate(a, b) {
-  return new Date(a.nextCharge).valueOf() - new Date(b.nextCharge).valueOf();
+  return new Date(a.nextCharge) - new Date(b.nextCharge)
 }
 
-  // console.log(subscriptions.sort(byDate))
+
 
   if (!subscriptions.length) {
     return <h3>No Subscriptions Yet</h3>;
@@ -17,8 +19,8 @@ function byDate(a, b) {
   return (
     <div>
       <h3>My Subscriptions</h3>
-      {subscriptions &&
-        subscriptions.map(subscription => (
+      {currentSubscriptions &&
+        currentSubscriptions.sort(byDate).map(subscription => (
           <div key={subscription._id} >
             <p>{subscription.name}</p>
             <p>{subscription.amount}</p>
@@ -32,4 +34,4 @@ function byDate(a, b) {
   );
 };
 
-export default subList;
+export default SubList;

@@ -4,6 +4,8 @@ import Auth from '../../utils/auth';
 import Logo from '../../assets/logo2.png'
 
 
+
+
 const Header = () => {
 
     const logout = event => {

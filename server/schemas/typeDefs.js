@@ -36,10 +36,13 @@ type User {
     subscriptions( username: String): [Subscription]
     subscription(_id: ID!): Subscription
   }
+
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addSubscription( name: String!, amount: Float!, nextCharge: String!): Subscription
+    updateSubscription( _id: ID, name: String, amount: Float, nextCharge: String): Subscription
   }
 `;
 
