@@ -22,7 +22,6 @@ function beforeToday(a){
 
 let filteredSubscriptions = [ ... subscriptions].filter(beforeToday)
 
-let newArray = [... filteredSubscriptions]
 
 for(var i = 0; i < filteredSubscriptions.length; i++){
 var timestamp = new Date(filteredSubscriptions[i].nextCharge)
