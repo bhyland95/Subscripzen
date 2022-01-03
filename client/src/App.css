@@ -61,6 +61,16 @@
   align-items: center;
 }
 
+.loginPage {
+    background: #F1C0E8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+  
+}
+
 .signup {
   background-color: #CFBAF0;
   display: flex;
@@ -68,6 +78,14 @@
   align-items: center;
 }
 
+.signupPage {
+  background: #CFBAF0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
   .nav-item {
     padding-left: 70px;

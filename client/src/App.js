@@ -57,7 +57,7 @@ function App() {
               <Route exact path="/addsub" component={AddSub} />
 
 
-              <Route component={Landing} />
+              <Route component={Home} />
             </Switch>
           </div>
         </div>

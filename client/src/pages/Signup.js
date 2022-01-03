@@ -35,7 +35,7 @@ const Signup = () => {
   };
 
   return (
-    <main className=''>
+    <main className='signupPage'>
       <div className=''>
         <div className=''>
 
