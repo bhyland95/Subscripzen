@@ -7,7 +7,6 @@ type User {
     _id: ID
     username: String
     email: String
-    friendCount: Int
     subscriptions: [Subscription]
   }
   type Subscription {
@@ -37,8 +36,9 @@ type User {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addSubscription( name: String!, amount: Float!, nextCharge: String!): Subscription
+    removeSubscription( _id: ID!): User
+
   }
 `;
 
-// export the typeDefs
 module.exports = typeDefs;

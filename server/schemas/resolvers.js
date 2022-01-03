@@ -74,6 +74,17 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        removeSubscription: async (parent, {_id}, context) => {
+            if (context.user) {
+                const user = await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { subscriptions:{_id}} },
+                    { new: true }
+                );
+
+                return user;
+            }
+        }
        
     }
 };
