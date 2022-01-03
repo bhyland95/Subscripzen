@@ -8,6 +8,22 @@ const AddSub = () => {
 
     const [addSub, { error }] = useMutation(ADD_SUB);
 
+    let today = new Date()
+    let year = today.getFullYear()
+    let month = (today.getMonth())+1
+    if(month < 10){
+        month = '0' + month 
+    }
+    let day = today.getDate()
+    if(day < 10){
+        day = '0' + day 
+    }
+    let dt = year+'-'+month+'-'+day
+
+    console.log(dt)
+
+
+
     // update state based on form input changes
     const handleChange = (event) => {
         let { name, value } = event.target;
@@ -68,7 +84,8 @@ const AddSub = () => {
                                 className='form-input'
                                 placeholder='Next Charge'
                                 name='nextCharge'
-                                type='nextCharge'
+                                type='date'
+                                min= {dt}
                                 id='nextCharge'
                                 value={formState.nextCharge}
                                 onChange={handleChange}

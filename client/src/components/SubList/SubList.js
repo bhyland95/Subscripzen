@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import dateFormat from '../utils/dateFormat';
+import dateFormat from '../../utils/dateFormat';
+import './SubList.css'
 
 
 const SubList = ({ subscriptions }) => {
@@ -8,7 +9,6 @@ const [currentSubscriptions, setCurrentSubscriptions] = useState( [ ... subscrip
 
 
 const today = new Date()
-
 
 
 function byDate(a, b) {
@@ -46,10 +46,11 @@ console.log(filteredSubscriptions)
       <h3>My Subscriptions</h3>
       {currentSubscriptions &&
         currentSubscriptions.sort(byDate).map(subscription => (
-          <div key={subscription._id} >
-            <p>{subscription.name}</p>
-            <p>{subscription.amount}</p>
-            <p>{subscription.nextCharge}</p>
+          <div className='sublistContainer' key={subscription._id} >
+            <p className='subscriptionName'>{subscription.name}</p>
+            <p className='subscriptionAmount'>${subscription.amount}</p>
+            <br />
+            <p className='subscriptionDate'>Due on: {subscription.nextCharge}</p>
           </div>
         ))
         }

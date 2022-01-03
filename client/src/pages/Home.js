@@ -1,5 +1,5 @@
 import React from 'react';
-import SubList from '../components/SubList';
+import SubList from '../components/SubList/SubList';
 import Total from '../components/Total';
 
 // import Header from '../components/Header'
@@ -28,8 +28,7 @@ const Home = () => {
                                     subscriptions={userData.me.subscriptions}
                             />
                             </h2>
-                            <br></br>
-                            <h2>Cancel and Save - link to save money page </h2>
+                            
                         </div>
                     </div>
 
@@ -41,7 +40,7 @@ const Home = () => {
 
 
             {loggedIn && userData ? (
-                <div className="col-12 col-lg-3 mb-3">
+                <div className="">
                     <SubList
                         subscriptions={userData.me.subscriptions}
 

@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+.sublistContainer {
+    width: 100%;
+    border-bottom: 1px solid black;
+    min-height: 80px ;
+    padding: 10px;
+}
+
+.subscriptionName {
+      font-size: 18px;
+      font-weight: 600;
+      float: left;
+      width:50%;
+      text-align:left;
+}
+
+.subscriptionDate {
+      margin-top: 15px;
+      text-align:left;
+      font-size: 18px;
+      font-weight: 600;
+}
+
+.subscriptionAmount {
+    float: left;
+    width:33.33333%;
+    text-align:right;
+    font-size: 18px;
+    font-weight: 600;
+}
