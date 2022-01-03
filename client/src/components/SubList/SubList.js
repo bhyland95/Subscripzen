@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import dateFormat from '../../utils/dateFormat'
 import { UPDATE_SUB } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
-
+import './SubList.css'
 
 const SubList = ({ subscriptions }) => {
 
@@ -55,10 +55,11 @@ const SubList = ({ subscriptions }) => {
       <h3>My Subscriptions</h3>
       {[...subscriptions] &&
         [...subscriptions].sort(byDate).map(subscription => (
-          <div key={subscription._id} >
-            <p>{subscription.name}</p>
-            <p>{subscription.amount}</p>
-            <p>{subscription.nextCharge}</p>
+          <div key={subscription._id} className='sublistContainer' >
+            <p className='subscriptionName'>{subscription.name}</p>
+            <p className='subscriptionAmount'>{subscription.amount}</p>
+            <br />
+            <p className='subscriptionDate'>{subscription.nextCharge}</p>
           </div>
         ))
       }
