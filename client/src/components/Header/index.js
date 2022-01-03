@@ -11,15 +11,15 @@ const Header = () => {
         Auth.logout();
     };
 
-    return ( 
+    return (
         <header className="app-header">
             <div className="nav">
                 <Link to="/">
-                    {/* <h1>Subscripzen</h1> */}
                     <img className="logo" src={Logo}></img>
-
                 </Link>
-
+                <h4>Logout</h4>
+                <h4>Add</h4>
+                <h4>Username</h4>
                 <nav className="text-center">
                     {Auth.loggedIn() ? (
                         <>
@@ -32,10 +32,10 @@ const Header = () => {
                         </>
                     ) : (
                         <>
-                            <div className="loginSignupBtn ">
-                                <Link className="btnCenter" to="/login">Login</Link>
-                                <Link className="btnCenter" to="/signup">Signup</Link>
-                            </div>
+                            {/* <div className="loginSignupBtn">
+                                <Link className="landingbtns login" to="/login">Login</Link>
+                                <Link className="landingbtns signup" to="/signup">Signup</Link>
+                            </div> */}
                         </>
 
                     )}

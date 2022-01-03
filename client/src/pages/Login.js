@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import Header from '../components/Header'
+import { Link } from 'react-router-dom';
 
 
 const Login = (props) => {
@@ -42,7 +44,9 @@ const Login = (props) => {
   };
 
   return (
+
     <main className='loginPage'>
+      <Header />
       <div className=''>
         <div className=''>
 
@@ -70,6 +74,10 @@ const Login = (props) => {
             {error && <div>Login failed</div>}
           </div>
         </div>
+      </div>
+      <div className="loginSignupBtn">
+        <h3>Need to Signup?</h3>
+        <Link className="landingbtns signup" to="/signup">Signup</Link>
       </div>
     </main>
   );

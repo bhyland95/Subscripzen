@@ -4,15 +4,21 @@
 
 .app-header {
     background-color: #8EECF5;
-    height: fit-content;
+    color: white;
+    height: 150px;
+  }
+
+  .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1%;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    height: 50%;
   }
+
+   .logo {
+  height: 175px;
+  width: 175px;
+} 
+ 
 
   .landingPage{
     background: #8EECF5;
@@ -25,8 +31,8 @@
   
   .landingLogo {
     border-radius: 25%;
-    height: 150px;
-    width: 150px;
+    height: 240px;
+    width: 240px;
     margin-top: 5%;
     
   }
@@ -97,17 +103,9 @@
   flex-wrap: wrap;
 }
 
-/* main {
-background-color: #FBEEF9;
-} */
 
-.logo {
-  border-radius: 10%;
-  height: 78%;
-  width: 55%;
-  margin-top: 5%;
-  border-right: 1px, #FBEEF9;
-}
+
+
 
 
 
@@ -137,6 +135,7 @@ background-color: #FBEEF9;
   flex-direction: column;
   max-width: 500px;
   align-items: center;
+
 }
 
 .centerdiv {
@@ -144,6 +143,8 @@ background-color: #FBEEF9;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  vertical-align: center;
+  margin-top: 10%;
 }
 
 .form-input {
