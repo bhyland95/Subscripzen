@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import dateFormat from '../utils/dateFormat';
-import { UPDATE_SUB } from '../utils/mutations';
+import dateFormat from '../../utils/dateFormat'
+import { UPDATE_SUB } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
 
 
@@ -37,13 +37,12 @@ const SubList = ({ subscriptions }) => {
         variables: { ...filteredSubscriptions[i] }
     })
 
-      console.log(timestamp)
+      
     }
 
   }
 
-  console.log(filteredSubscriptions)
-
+  
 
 
 

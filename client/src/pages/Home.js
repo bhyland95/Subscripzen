@@ -1,5 +1,5 @@
 import React from 'react';
-import SubList from '../components/SubList';
+import SubList from '../components/SubList/SubList';
 import Total from '../components/Total';
 
 // import Header from '../components/Header'
