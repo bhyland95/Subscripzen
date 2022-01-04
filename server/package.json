@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node config/seeds.js",
+    "seed": "node seeders/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "apollo-server-express": "^2.11.0",
     "bcrypt": "^5.0.1",
     "express": "^4.17.2",
+    "faker": "^5.5.3",
     "graphql": "^15.5.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.7",
