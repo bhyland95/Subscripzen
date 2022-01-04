@@ -17,26 +17,30 @@ section {
     background-position: center;
     background-attachment: fixed;
     padding: 20px;
+    z-index: -1;
+
 }
 
 .headerContainer {
     position: absolute;
     width: 94%;
     height: 94%;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.35);
     box-shadow: 0 15px 35px rgba(255,255,255,0.05);
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    z-index: 2;
+    backdrop-filter: blur(4px);
     
 }
 
 .totalContainer {
     position: relative;
     transform: translateX(-100px);
-    top:-280px;
+    top:-315px;
     max-width: 700px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     border-radius: 20px;
@@ -46,6 +50,8 @@ section {
     border-left: 1px solid rgba(255,255,255,0.5);
     padding: 30px;
     padding-left: 110px;
+    z-index: 2;
+
     
 }
 
@@ -53,6 +59,8 @@ section {
     vertical-align: top;
     font-weight: normal;
     font-size: 1.2rem;
+    z-index: 2;
+
 }
 
 .totalAmount {
@@ -60,23 +68,27 @@ section {
     font-weight: bold;
     text-align: center;
     padding: 2px;
+    z-index: 2;
+
 }
 
 .logo {
-    z-index: 1;
     position: absolute;
     left: 72%;
     transform: translateX(-50%);
-    top: 42px;
-    width: 30%;
+    top: 30px;
+    width: 28%;
+    z-index: 2;
+
 }
 
 .mysubs {
     position: absolute; 
     left: 50%;
     transform: translateX(-50%);
-    top: 160px;
+    top: 170px;
     width:200px;
+    z-index: 2;
     
     
 }
@@ -86,20 +98,76 @@ section {
     position: absolute; 
     left: 50%;
     transform: translateX(-50%);
-    top: 200px;
+    top: 225px;
     
     width:100%;
     min-width: 330px;
-    min-height: 400px;
+    height: 600px;
     max-width: 900px;
     /* box-shadow: 0 15px 30px rgba(0,0,0,0.5); */
     border-radius: 20px;
-    backdrop-filter: blur(100px);
-    background: rgb(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.322);
     border: 1px solid rgba(255,255,255,0.25);
     border-top: 1px solid rgba(255,255,255,0.5);
     border-left: 1px solid rgba(255,255,255,0.5);
     padding: 5px;
+    z-index: 2;
     
+}
+
+
+.square {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    z-index: 0;
+    backdrop-filter: blur(10px);
+    animation: animate 10s linear infinite;
+}
+
+.square:nth-child(1) {
+    top:10px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.square:nth-child(2) {
+    bottom:100px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.square:nth-child(3) {
+    bottom:140px;
+    left: 4px;
+    width: 100px;
+    height: 150px;
+
+}
+
+.square:nth-child(4) {
+    top:180px;
+    left: -10px;
+    width: 300px;
+    height: 120px;
+
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
 }
 }

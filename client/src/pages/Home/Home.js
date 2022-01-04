@@ -22,8 +22,16 @@ const Home = () => {
     return (
         <body>
             <section>
+            <div className='square'></div>
+            <div className='square'></div>
+            <div className='square'></div>
+            <div className='square'></div>
+
+
 
                 <div className='headerContainer'>
+
+
                     <Header />
                     {loggedIn && userData ? (
                         <div className='totalContainer'>
@@ -38,14 +46,14 @@ const Home = () => {
                         <h3>Login to get started!</h3>
                     </div>}
 
-                    <img className='logo' src={logo2}/>
+                    <img className='logo' src={logo2} />
 
                     <div className='mysubs'>
                         <h2>My Subscriptions</h2>
                     </div>
 
                     {loggedIn && userData ? (
-                        
+
                         <div className="SubContainer">
                             <SubList
                                 subscriptions={userData.me.subscriptions}
@@ -53,14 +61,14 @@ const Home = () => {
                         </div>
                     ) : null}
 
-
+                    
                 </div>
 
 
 
 
 
-            
+
 
 
             </section>
