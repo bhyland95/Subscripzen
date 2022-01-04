@@ -4,6 +4,7 @@ import Auth from '../../utils/auth';
 import Logo from '../../assets/logo2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 import './header.css'
 
 
@@ -25,11 +26,16 @@ const Header = () => {
                 {Auth.loggedIn() ? (
                     <>
                         <li>
-                            <Link  to="/addsub">
+                            <a href="/" onClick={logout}>
+                                <FontAwesomeIcon className="LogoutIcon" icon={faDoorOpen} />
+                            </a>
+                        </li>
+                        <li>
+                            <Link to="/addsub">
                                 <div className='circle'>
-                                   
-                                        <FontAwesomeIcon className="NavItem" icon={faPlus} />
-                                    
+
+                                    <FontAwesomeIcon className="NavItem" icon={faPlus} />
+
                                 </div>
                             </Link>
 
