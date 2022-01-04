@@ -2,15 +2,15 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
-import Header from './components/Header'
+import Header from './components/Header/header';
 import './App.css'
 
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 
 
 
 
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Signup from './pages/Signup';
 import AddSub from './pages/AddSub';
 
@@ -43,11 +43,11 @@ function App() {
     <ApolloProvider client={client}>
 
       <Router forceRefresh={true}>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="">
 
-          <Header />
+          
 
-          <div className="container">
+          <div className="">
             <Switch>
             
 

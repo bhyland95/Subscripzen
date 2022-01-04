@@ -1,0 +1,105 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    min-height: 100vh;
+    background-image: url('../../assets/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.headerContainer {
+    position: absolute;
+    width: 94%;
+    height: 94%;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 15px 35px rgba(255,255,255,0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.totalContainer {
+    position: relative;
+    transform: translateX(-100px);
+    top:-280px;
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding: 30px;
+    padding-left: 110px;
+    
+}
+
+.totalContainer h2 {
+    vertical-align: top;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.totalAmount {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+}
+
+.logo {
+    z-index: 1;
+    position: absolute;
+    left: 72%;
+    transform: translateX(-50%);
+    top: 42px;
+    width: 30%;
+}
+
+.mysubs {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160px;
+    width:200px;
+    
+    
+}
+
+
+.SubContainer {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    
+    width:100%;
+    min-width: 330px;
+    min-height: 400px;
+    max-width: 900px;
+    /* box-shadow: 0 15px 30px rgba(0,0,0,0.5); */
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    background: rgb(255, 255, 255, 0.45);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding: 5px;
+    
+}
+}

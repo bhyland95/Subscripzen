@@ -32,7 +32,7 @@ const Header = () => {
                             </a>
                             <Link to="/profile">My Subscriptions</Link>
 
-                            <Link to="/addsub">Add Subscription</Link>
+                            <Link to="/addsub">Add</Link>
                         </>
                     ) : (
                         <>

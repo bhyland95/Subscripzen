@@ -52,13 +52,13 @@ const SubList = ({ subscriptions }) => {
 
   return (
     <div>
-      <h3>My Subscriptions</h3>
+      
       {[...subscriptions] &&
         [...subscriptions].sort(byDate).map(subscription => (
           <div key={subscription._id} className='sublistContainer' >
             <p className='subscriptionName'>{subscription.name}</p>
-            <p className='subscriptionAmount'>{subscription.amount}</p>
-            <br />
+            <p className='subscriptionAmount'>${subscription.amount}</p>
+            
             <p className='subscriptionDate'>{subscription.nextCharge}</p>
           </div>
         ))
