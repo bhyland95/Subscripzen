@@ -2,11 +2,16 @@
 // import { useMutation } from "@apollo/client";
 // import { REMOVE_SUB } from "../utils/mutations";
 
+
+
+
 // const RemoveSub = () => {
 //     return (
-//         <div>
+//         <main>
+//             <div>
 
-//         </div>
-//     )
-// }
-// export default RemoveSub;
+//             </div>
+//         </main>
+//      )
+//  }
+//  export default RemoveSub;
