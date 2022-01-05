@@ -37,7 +37,7 @@ const AddSub = () => {
             [name]: value,
             
         });
-        console.log(Date.parse(formState.nextCharge))
+      
     };
 
     // submit form (notice the async!)

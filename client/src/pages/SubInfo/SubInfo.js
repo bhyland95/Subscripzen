@@ -15,8 +15,7 @@ const SubInfo= () => {
 //     variables: { id: thoughtId }
 //   });
 
-  console.log(subData)
-    console.log(params.id)
+
     return (
    <h1>Hello</h1>
   );
