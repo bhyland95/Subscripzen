@@ -2,7 +2,7 @@
   box-sizing: border-box
 }
 
-.app-header {
+/* .app-header {
     background-color: #8EECF5;
     color: white;
     height: 150px;
@@ -98,31 +98,10 @@
     padding-left: 70px;
   }
 
-}
-
-
-
-
-
-
-
 
 .btns {
   padding-left: 70px;
   
-}
-
-.spendingBox {
-  border: 3px solid #FBEEF9;
-  margin-top: 5%;
-  display: flex;
-  align-items: center;
-}
-
-
-.userSpending {
-  border: 3px solid #FBEEF9;
-  margin-top: 3%;
 }
 
 
@@ -144,13 +123,6 @@
   margin-top: 10%;
 }
 
-.form-input {
-  margin-top: 2px;
-}
-
-.openPage {
-background-color: blue;
-}
 
 
-
+ */

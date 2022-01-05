@@ -2,15 +2,13 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
-import Header from './components/Header/header';
+// import Header from './components/Header/header';
 import './App.css'
 
 
 
 import Home from './pages/Home';
-import Subscription from './pages/subscription';
-import NavBar from './components/NavBar';
-import Nav from './components/Nav'
+// import Subscription from './pages/subscription';
 
 
 
@@ -18,7 +16,7 @@ import Nav from './components/Nav'
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup';
 import AddSub from './pages/AddSub';
-import Landing from './pages/Landing'
+import Landing from './pages/LandingPage/Landing'
 
 
 const httpLink = createHttpLink({
@@ -51,22 +49,12 @@ function App() {
       <Router forceRefresh={true}>
         <div className="">
 
-<<<<<<< HEAD
-          {/* <Header /> */}
-=======
           
->>>>>>> Testing
 
           <div className="">
             <Switch>
-<<<<<<< HEAD
               <Route exact path="/" component={Landing} />
               <Route exact path="/home" component={Home} />
-=======
-            
-
-              <Route  exact path="/" component={Home} />
->>>>>>> Testing
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/addsub" component={AddSub} />

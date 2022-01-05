@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-<<<<<<< HEAD
+
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-import Header from '../../components/Header'
-=======
-<<<<<<<< HEAD:client/src/pages/Login/Login.js
-import { LOGIN_USER } from '../../utils/mutations';
-import Auth from '../../utils/auth';
-========
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
-import Header from '../components/Header'
+import Header from "../../components/Header";
 import { Link } from 'react-router-dom';
 
->>>>>>>> Testing:client/src/pages/Login.js
->>>>>>> Testing
+
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -32,11 +23,7 @@ const Login = (props) => {
     });
   };
 
-<<<<<<< HEAD
 
-=======
- 
->>>>>>> Testing
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -90,20 +77,13 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
 
-=======
-<<<<<<<< HEAD:client/src/pages/Login/Login.js
-
-      
-========
       <div className="loginSignupBtn">
         <h3>Need to Signup?</h3>
         <Link className="landingbtns signup" to="/signup">Signup</Link>
       </div>
->>>>>>>> Testing:client/src/pages/Login.js
->>>>>>> Testing
+
     </main>
   );
 };
