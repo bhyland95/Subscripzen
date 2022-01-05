@@ -13,7 +13,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup';
 import AddSub from './pages/AddSub';
-
+import SubInfo from './pages/SubInfo/SubInfo'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -55,6 +55,8 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/addsub" component={AddSub} />
+              <Route exact path="/SubInfo/:id" component={SubInfo} />
+
 
 
               <Route component={Home} />

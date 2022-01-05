@@ -15,3 +15,15 @@ query {
     }
   }
   `;
+  
+export const QUERY_SUB = gql`
+  query subscription($id: ID!){
+    subscription(_id: $id ){
+      _id
+      name
+      amount
+     nextCharge
+     
+    }
+  }
+  `;

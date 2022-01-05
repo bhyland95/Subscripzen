@@ -18,6 +18,8 @@ const resolvers = {
 
 
         subscriptions: async () => {
+
+            // const Subs = await Subscriptions.find()
             return Subscription.find()
         },
         subscription: async (parent, { _id }) => {
