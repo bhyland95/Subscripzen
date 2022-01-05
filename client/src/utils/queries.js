@@ -23,7 +23,7 @@ export const QUERY_SUB = gql`
       name
       amount
      nextCharge
-     
+     addDate
     }
   }
   `;

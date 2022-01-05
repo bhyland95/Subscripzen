@@ -15,6 +15,7 @@ type User {
     name: String
     amount: Float
     nextCharge: String
+    addDate: String
   }
   type Reaction {
     _id: ID
@@ -41,7 +42,7 @@ type User {
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addSubscription( name: String!, amount: Float!, nextCharge: String!): Subscription
+    addSubscription( name: String!, amount: Float!, nextCharge: String!, addDate: String!): Subscription
     updateSubscription( _id: ID, name: String, amount: Float, nextCharge: String): Subscription
   }
 `;
