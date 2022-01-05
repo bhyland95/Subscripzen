@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_SUB } from '../utils/mutations';
+import dateFormat from '../utils/dateFormat'
 
 
 const AddSub = () => {
@@ -20,7 +21,7 @@ const AddSub = () => {
     }
     let dt = year+'-'+month+'-'+day
 
-    console.log(dt)
+    
 
 
 
@@ -34,8 +35,9 @@ const AddSub = () => {
         setFormState({
             ...formState,
             [name]: value,
-
+            
         });
+        console.log(Date.parse(formState.nextCharge))
     };
 
     // submit form (notice the async!)

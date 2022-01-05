@@ -19,7 +19,7 @@ const SubList = ({ subscriptions }) => {
   }
 
   function beforeToday(a) {
-    return (today - new Date(a.nextCharge)) >= 0
+    return (today - new Date(a.nextCharge)) >= 1
   }
 
 
