@@ -74,6 +74,7 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+<<<<<<< HEAD
         removeSubscription: async (parent, {_id}, context) => {
             if (context.user) {
                 const user = await User.findByIdAndUpdate(
@@ -85,6 +86,12 @@ const resolvers = {
                 return user;
             }
         }
+=======
+        updateSubscription: async (parent, { _id, name, amount, nextCharge}) => {
+      
+            return await Subscription.findByIdAndUpdate(_id, { name, amount, nextCharge }, { new: true });
+          },
+>>>>>>> Testing
        
     }
 };

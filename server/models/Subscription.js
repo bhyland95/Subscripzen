@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const dateFormat = require('../utils/dateFormatSimple');
 
 const subscriptionSchema = new Schema(
     {
@@ -23,7 +23,8 @@ const subscriptionSchema = new Schema(
     },
     {
         toJSON: {
-            getters: true
+            getters: true,
+            virtuals: true
         }
     }
 );
