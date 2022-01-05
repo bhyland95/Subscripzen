@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import { LOGIN_USER } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -18,7 +18,7 @@ const Login = (props) => {
     });
   };
 
-  // submit form
+ 
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -73,6 +73,8 @@ const Login = (props) => {
           </div>
         </div>
       </div>
+
+      
     </main>
   );
 };

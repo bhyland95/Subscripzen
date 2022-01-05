@@ -2,22 +2,18 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
-import Header from './components/Header'
+import Header from './components/Header/header';
 import './App.css'
 
-
-
-import Home from './pages/Home';
-import Subscription from './pages/subscription';
-import NavBar from './components/NavBar';
-import Nav from './components/Nav'
+import Home from './pages/Home/Home';
 
 
 
 
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Signup from './pages/Signup';
 import AddSub from './pages/AddSub';
+import SubInfo from './pages/SubInfo/SubInfo'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -39,26 +35,31 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+ 
+
   return (
+    
     <ApolloProvider client={client}>
 
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+      <Router forceRefresh={true}>
+        <div className="">
 
-          <Header />
+          
 
-          <div className="container">
+          <div className="">
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/subs" component={Subscription} />
+            
 
-      
+              <Route  exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/addsub" component={AddSub} />
+              <Route exact path="/SubInfo/:id" component={SubInfo} />
 
 
-      
+
+              <Route component={Home} />
             </Switch>
           </div>
         </div>

@@ -1,27 +1,27 @@
-import React from 'react';
-import HmSpending from './HmSpending';
+// import React from 'react';
+// import HmSpending from './HmSpending';
 
 
-// import Header from '../components/Header'
+// // import Header from '../components/Header'
 
-const Home = () => {
+// const Home = () => {
 
-    return (
-        <div>
+//     return (
+//         <div>
 
-            <main>
-                <div className="spendingBox">
-                    <div>
-                        <h2 >Monthly Spending: insert calculated number</h2>
-                        <br></br>
-                        <h2>Cancel and Save - link to save money page </h2>
-                    </div>
-                </div>
+//             <main>
+//                 <div className="spendingBox">
+//                     <div>
+//                         <h2 >Monthly Spending: insert calculated number</h2>
+//                         <br></br>
+//                         <h2>Cancel and Save - link to save money page </h2>
+//                     </div>
+//                 </div>
 
-            </main>
-            <HmSpending></HmSpending>
-        </div>
-    );
-};
+//             </main>
+//             <HmSpending></HmSpending>
+//         </div>
+//     );
+// };
 
-export default Home;
+// export default Home;

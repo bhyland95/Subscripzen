@@ -1,32 +1,32 @@
-const faker = require('faker');
+// const faker = require('faker');
 
-const db = require('../config/connection');
-const { User, Subscription } = require('../models');
+// const db = require('../config/connection');
+// const { User, Subscription } = require('../models');
 
-db.once('open', async () => {
-    await Subscription.deleteMany({});
-    await User.deleteMany({});
+// db.once('open', async () => {
+//     await Subscription.deleteMany({});
+//     await User.deleteMany({});
 
-    const userData = []
+//     const userData = []
 
-    for (let i=0; i<50; i=+1) {
-        const username = faker.internet.userName();
-        const email = faker.internet.email(username);
-        const password = faker.internet.password();
-        //const subscriptions = subscriptions();
+//     for (let i=0; i<50; i=+1) {
+//         const username = faker.internet.userName();
+//         const email = faker.internet.email(username);
+//         const password = faker.internet.password();
+//         //const subscriptions = subscriptions();
 
-        userData.push({ username, email, password });
-    }
-    await User.collection.insertMany(userData);
+//         userData.push({ username, email, password });
+//     }
+//     await User.collection.insertMany(userData);
 
-    const createdUsers = await User.collection.insertMany(userData);
+//     const createdUsers = await User.collection.insertMany(userData);
     
-    // let createdSubscriptions = [];
-    // let createdSubscriptions = Math.floor(Math.random() * createdUsers.ops.length);
-    // const { username, _id: userId } = createdUsers.ops[randomUserIndex]
+//     // let createdSubscriptions = [];
+//     // let createdSubscriptions = Math.floor(Math.random() * createdUsers.ops.length);
+//     // const { username, _id: userId } = createdUsers.ops[randomUserIndex]
     
-    // const created
+//     // const created
 
-    console.log('all done!');
-    process.exit(0);
-})
+//     console.log('all done!');
+//     process.exit(0);
+// })
