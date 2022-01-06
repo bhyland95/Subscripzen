@@ -48,7 +48,7 @@ mutation updateSubscription($_id: ID!, $name: String!, $amount: Float!, $nextCha
 `
 
 export const REMOVE_SUB = gql`
-  mutation removeSubscriptions(_id$: ID!) {
+  mutation removeSubscriptions($_id: ID!) {
     removeSubscription(_id: $_id) {
       _id
       username

@@ -15,16 +15,16 @@ const SubInfo= () => {
   const subscription = data?.subscription || {}
 const [removeSubscription, {error}] = useMutation(REMOVE_SUB)
 
-var given = loading?moment():moment(data.subscription.addDate, "DD-MM-YYYY");
-var current = moment().startOf('day');
+// var given = loading?moment():moment(data.subscription.addDate, "DD-MM-YYYY");
+// var current = moment().startOf('day');
 
-var nextCharge = loading?moment():moment(data.subscription.nextCharge, "DD-MM-YYYY");
-//Difference in number of days
-const numberOfDays = moment().diff(given,"days")
-const daysRemaining = moment().diff( nextCharge,"days")
-console.log(daysRemaining)
-console.log(numberOfDays)
-console.log(data)
+// var nextCharge = loading?moment():moment(data.subscription.nextCharge, "DD-MM-YYYY");
+// //Difference in number of days
+// const numberOfDays = moment().diff(given,"days")
+// const daysRemaining = moment().diff( nextCharge,"days")
+// console.log(daysRemaining)
+// console.log(numberOfDays)
+// console.log(data)
 
 
   const handleDelete = async() => {
@@ -35,8 +35,14 @@ console.log(data)
   }
     return (
       <>
-   <h1>Hello</h1>
-   {loading?"loading..":<ul><li>Name:{data.subscription.name}</li><li>Amount:{data.subscription.amount}</li><li>Next Charge Date:{data.subscription.nextCharge}</li><li><button onClick={handleDelete}>Remove Subscription</button></li></ul>}
+   <h1></h1>
+   {loading?"loading..":
+   <ul>
+     <li>Name: {data.subscription.name}</li>
+     <li>Amount: {data.subscription.amount}</li>
+     <li>Next Charge Date: {data.subscription.nextCharge}</li>
+     <li><button onClick={handleDelete}>Remove Subscription</button></li>
+    </ul>}
    </>
   );
 };
