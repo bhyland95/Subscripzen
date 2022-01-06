@@ -7,7 +7,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 import './header.css'
 
-
+//
 
 const Header = () => {
 
@@ -31,7 +31,7 @@ const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <Link to="/addsub">
+                            <Link to="/sublist">
                                 <div className='circle'>
 
                                     <FontAwesomeIcon className="NavItem" icon={faPlus} />

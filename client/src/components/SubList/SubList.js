@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import dateFormat from '../../utils/dateFormat'
 import { UPDATE_SUB } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
@@ -35,32 +36,34 @@ const SubList = ({ subscriptions }) => {
 
       updateSub({
         variables: { ...filteredSubscriptions[i] }
-    })
+      })
 
-      
+
     }
 
   }
 
+
+
+  useEffect(()=>console.log(subscriptions),[subscriptions])
   
 
-
-
   if (!subscriptions.length) {
-    return <h3>No Subscriptions Yet</h3>;
+    return <p>No Subscriptions Yet</p>;
   }
 
   return (
     <div>
-      
+
       {[...subscriptions] &&
         [...subscriptions].sort(byDate).map(subscription => (
-          <div key={subscription._id} className='sublistContainer' >
-            <p className='subscriptionName'>{subscription.name}</p>
-            <p className='subscriptionAmount'>${subscription.amount}</p>
-            
-            <p className='subscriptionDate'>{subscription.nextCharge}</p>
-          </div>
+          <Link to={`/SubInfo/${subscription._id}`} className='links'>
+            <div key={subscription._id} className='sublistContainer' >
+              <p className='subscriptionName'>{subscription.name}</p>
+              <p className='subscriptionAmount'>${subscription.amount}</p>
+              <p className='subscriptionDate'>{dateFormat(subscription.nextCharge)}</p>
+            </div>
+          </Link>
         ))
       }
 

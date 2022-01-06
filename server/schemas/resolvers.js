@@ -18,6 +18,8 @@ const resolvers = {
 
 
         subscriptions: async () => {
+
+            // const Subs = await Subscriptions.find()
             return Subscription.find()
         },
         subscription: async (parent, { _id }) => {
@@ -63,6 +65,8 @@ const resolvers = {
             if (context.user) {
                 const subscription = await Subscription.create({ ...args, username: context.user.username });
 
+                console.log(subscription)
+
                 await User.findByIdAndUpdate(
                     { _id: context.user._id },
                     { $push: { subscriptions: subscription } },
@@ -73,6 +77,22 @@ const resolvers = {
             }
 
             throw new AuthenticationError('You need to be logged in!');
+        },
+        updateSubscription: async (parent, { _id, name, amount, nextCharge}) => {
+      
+            return await Subscription.findByIdAndUpdate(_id, { name, amount, nextCharge }, { new: true });
+          },
+
+          removeSubscription: async (parent, {_id}, context) => {
+            if (context.user) {
+                const user = await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { subscriptions:{_id}} },
+                    { new: true }
+                );
+
+                return user;
+            }
         },
        
     }

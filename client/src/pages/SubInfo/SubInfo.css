@@ -1,0 +1,64 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.subInfo {
+    
+        position: absolute;
+        width: 94%;
+        height: 50%;
+        background: rgba(255, 255, 255, 0.514);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-left: 1px solid rgba(255,255,255,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        z-index: 1;
+              
+    
+}
+
+.subInfoList {
+    list-style-type: none;
+}
+
+.subInfoList li{
+    padding: 10px;
+}
+
+.subInfoList li button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 24px;
+}
+
+
+
+@keyframes 
+
+animate {
+    0%,100%{
+        transform: translateY(-140px);
+    }
+    50% {
+        transform: translateY(140px);
+    }
+}
+
+
+
+}

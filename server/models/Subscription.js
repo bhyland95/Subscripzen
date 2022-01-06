@@ -15,6 +15,11 @@ const subscriptionSchema = new Schema(
             required: true
         },
         nextCharge: {
+            type: String,
+            default: "1/1/2022"
+          
+        },
+        addDate: {
             type: Date,
             default: Date.now,
             get: timestamp => dateFormat(timestamp)
@@ -23,11 +28,16 @@ const subscriptionSchema = new Schema(
     },
     {
         toJSON: {
-            getters: true
+            getters: true,
+            virtuals: true
         }
     }
 );
 
+
+// subscriptionSchema.virtual('total').get(function() {
+//     return this.amount.reduce((acc, doc) => acc + doc.points, 0);
+// });
 
 
 const Subscription= model('Subscription', subscriptionSchema);

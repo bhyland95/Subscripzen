@@ -1,0 +1,168 @@
+.landingPage{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    min-height: 100vh;
+    background-image: url('../../assets/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    z-index: -1;
+}
+
+.landingLogo {
+    position: absolute;
+    border-radius: 25%;
+    height: 200px;
+    width: 200px;
+    left: 50%; 
+    transform: translateX(-50%);
+    top: 200px;
+    
+}
+
+
+
+
+.landingbtns {
+width: 100%;
+height: 100px;
+}
+
+.buttonContainer {
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    height: 20%;
+    background: rgba(255, 255, 255, 0.514);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    left: 50%; 
+    transform: translateX(-50%);
+    bottom: 10px;
+    
+}
+
+.login {
+    background: rgba(255, 255, 255, 0.281);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    margin: 5px;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding-top: 14px;
+    font-weight: 600;
+    
+}
+
+.signup {
+    background: rgba(255, 255, 255, 0.281);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    margin: 5px;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding-top: 14px;
+    font-weight: 600;
+
+}
+
+.square-landing {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    z-index: 0;
+    backdrop-filter: blur(10px);
+    animation: animate 24s linear infinite;
+}
+
+.square-landing:nth-child(1) {
+    top:110px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.square-landing:nth-child(2) {
+    bottom:100px;
+    right: 5px;
+    width: 75px;
+    height: 75px;
+
+}
+
+
+.square-landing:nth-child(4) {
+    top:180px;
+    left: 0px;
+    width: 75px;
+    height: 75px;
+
+}
+
+.square-landing:nth-child(5) {
+    top:0px;
+    left: 50px;
+    width: 85px;
+    height: 85px;
+
+}
+
+.square-landing:nth-child(6) {
+    bottom:200px;
+    left: 80px;
+    width: 85px;
+    height: 85px;
+
+}
+
+.square-landing:nth-child(7) {
+    top:320px;
+    left: 180px;
+    width: 115px;
+    height: 120px;
+
+}
+
+
+@keyframes 
+
+animate {
+    0%,100%{
+        transform: translateY(-60px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+}
+

@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
+<<<<<<< HEAD
 import Header from '../../components/Header'
+=======
+import './Login.css'
+>>>>>>> Testing
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -42,6 +46,7 @@ const Login = (props) => {
   };
 
   return (
+<<<<<<< HEAD
 
     <main className='loginPage'>
       <Header />
@@ -75,6 +80,50 @@ const Login = (props) => {
       </div>
 
 
+=======
+    <main className='loginBox'>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+
+
+      
+      <div className='card-body'>
+     
+
+        <form className='login-form' onSubmit={handleFormSubmit}>
+
+          <h2> Welcome </h2>
+
+          <input
+            className='form-input'
+            placeholder='Email'
+            name='email'
+            type='email'
+            id='email'
+            value={formState.email}
+            onChange={handleChange}
+          />
+          <input
+            className='form-input'
+            placeholder='Password'
+            name='password'
+            type='password'
+            id='password'
+            value={formState.password}
+            onChange={handleChange}
+          />
+          <button className='form-input' type='submit'>
+            Submit
+          </button>
+        </form>
+        {error && <div>Login failed</div>}
+      </div>
+>>>>>>> Testing
     </main>
   );
 };

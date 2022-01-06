@@ -5,7 +5,7 @@
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
 section {
     display: flex;
@@ -38,9 +38,10 @@ section {
 }
 
 .totalContainer {
-    position: relative;
-    transform: translateX(-100px);
-    top:-315px;
+    position: absolute;
+    left: 16%;
+    transform: translateX(-50%);
+    top: 20px;
     max-width: 700px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     border-radius: 20px;
@@ -89,8 +90,6 @@ section {
     top: 170px;
     width:200px;
     z-index: 2;
-    
-    
 }
 
 
@@ -100,9 +99,9 @@ section {
     transform: translateX(-50%);
     top: 225px;
     
-    width:100%;
+    width:98%;
     min-width: 330px;
-    height: 600px;
+    height: 66%;
     max-width: 900px;
     /* box-shadow: 0 15px 30px rgba(0,0,0,0.5); */
     border-radius: 20px;
@@ -113,7 +112,8 @@ section {
     border-left: 1px solid rgba(255,255,255,0.5);
     padding: 5px;
     z-index: 2;
-    
+    overflow-y:auto;
+    scroll-padding: none;
 }
 
 
@@ -127,7 +127,7 @@ section {
     border-left: 1px solid rgba(255,255,255,0.2);
     z-index: 0;
     backdrop-filter: blur(10px);
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
 }
 
 .square:nth-child(1) {
@@ -140,7 +140,7 @@ section {
 
 .square:nth-child(2) {
     bottom:100px;
-    right: -10px;
+    right: 0px;
     width: 100px;
     height: 100px;
 

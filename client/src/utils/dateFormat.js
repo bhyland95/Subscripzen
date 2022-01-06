@@ -37,8 +37,11 @@ module.exports = (
         10: monthLength === 'short' ? '11' : 'November',
         11: monthLength === 'short' ? '12' : 'December'
     };
+    const dt = new Date(timestamp)
+    const dateObj = new Date(dt.setHours(dt.getHours()+6));
 
-    const dateObj = new Date(timestamp);
+    // new Date(new Date(1642636800000).setHours(dt.getHours()+6)) 
+
     const formattedMonth = months[dateObj.getMonth()];
 
     const dayOfMonth = dateSuffix
@@ -53,7 +56,7 @@ module.exports = (
 
  
 
-
+           
     const formattedTimeStamp = `${formattedMonth}-${dayOfMonth}-${year}`;
 
     return formattedTimeStamp;
