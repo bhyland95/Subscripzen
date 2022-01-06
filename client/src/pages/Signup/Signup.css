@@ -1,0 +1,177 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.signupBox{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    min-height: 100vh;
+    background-image: url('../../assets/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    z-index: -1;
+
+}
+.card-body {
+    
+        position: absolute;
+        width: 94%;
+        height: 55%;
+        background: rgba(255, 255, 255, 0.514);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-left: 1px solid rgba(255,255,255,0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        z-index: 1;
+        
+        
+    
+}
+
+.signup-form {
+    text-align: center;
+    position: relative;
+    padding: 3em;
+    height: 100%;
+}
+
+.signup-form h2 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 50px;
+
+}
+
+.form-input {
+    background: transparent;
+    width: 220px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.form-input[type="submit"]{
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.square-login {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    z-index: 0;
+    backdrop-filter: blur(10px);
+    animation: animate 34s linear infinite;
+}
+
+.test {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    z-index: 0;
+    backdrop-filter: blur(10px);
+    animation-name: animation2;
+    animation-duration: 10s;
+    animation-direction: linear;
+    z-index: -1;
+}
+
+.square-login:nth-child(1) {
+    top:110px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.square-login:nth-child(2) {
+    bottom:100px;
+    right: 0px;
+    width: 15px;
+    height: 75px;
+
+}
+
+.square-login:nth-child(3) {
+    bottom:140px;
+    left: 4px;
+    width: 70px;
+    height: 70px;
+
+}
+
+.square-login:nth-child(4) {
+    top:180px;
+    left: 0px;
+    width: 75px;
+    height: 75px;
+
+}
+
+.square-login:nth-child(5) {
+    top:0px;
+    left: 50px;
+    width: 85px;
+    height: 85px;
+
+}
+
+.square-login:nth-child(6) {
+    bottom:200px;
+    left: 180px;
+    width: 125px;
+    height: 125px;
+
+}
+
+.square-login:nth-child(7) {
+    top:320px;
+    left: 180px;
+    width: 115px;
+    height: 120px;
+
+}
+
+@keyframes 
+
+animate {
+    0%,100%{
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+
+
+}
