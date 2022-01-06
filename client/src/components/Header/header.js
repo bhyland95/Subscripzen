@@ -7,7 +7,6 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 import './header.css'
 
-//
 
 const Header = () => {
 
