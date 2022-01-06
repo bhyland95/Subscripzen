@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_SUB } from '../utils/mutations';
+import dateFormat from '../utils/dateFormat'
 
 
 const AddSub = () => {
@@ -8,14 +9,35 @@ const AddSub = () => {
 
     const [addSub, { error }] = useMutation(ADD_SUB);
 
+    let today = new Date()
+    let year = today.getFullYear()
+    let month = (today.getMonth())+1
+    if(month < 10){
+        month = '0' + month 
+    }
+    let day = today.getDate()
+    if(day < 10){
+        day = '0' + day 
+    }
+    let dt = year+'-'+month+'-'+day
+
+    
+
+
+
     // update state based on form input changes
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        let { name, value } = event.target;
 
+        if(name === "amount" ){
+            value = parseFloat(value)
+        }
         setFormState({
             ...formState,
             [name]: value,
+            
         });
+      
     };
 
     // submit form (notice the async!)
@@ -28,6 +50,7 @@ const AddSub = () => {
             });
 
             setFormState('','','')
+            window.location.assign('/')
         } catch (e) {
             console.error(e);
         }
@@ -63,7 +86,8 @@ const AddSub = () => {
                                 className='form-input'
                                 placeholder='Next Charge'
                                 name='nextCharge'
-                                type='nextCharge'
+                                type='date'
+                                min= {dt}
                                 id='nextCharge'
                                 value={formState.nextCharge}
                                 onChange={handleChange}

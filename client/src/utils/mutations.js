@@ -25,12 +25,13 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_SUB = gql`
-  mutation addSubscription($name: String!, $amount: Float!, $nextCharge: String!) {
-    addSubscription(name: $name, amount: $amount, nextCharge: $nextCharge) {
+  mutation addSubscription($name: String!, $amount: Float!, $nextCharge: String!, $addDate: String) {
+    addSubscription(name: $name, amount: $amount, nextCharge: $nextCharge, addDate: $addDate) {
       _id
       name
       amount
       nextCharge
+      addDate
     }
   }
 `
@@ -46,3 +47,14 @@ export const ADD_SUB = gql`
   }
  `
  ;
+
+export const UPDATE_SUB = gql`
+mutation updateSubscription($_id: ID!, $name: String!, $amount: Float!, $nextCharge: String!) {
+  updateSubscription( _id: $_id, name: $name, amount: $amount, nextCharge: $nextCharge) {
+    _id
+    name
+    amount
+    nextCharge
+  }
+}
+`

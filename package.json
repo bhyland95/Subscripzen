@@ -10,7 +10,6 @@
     "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "cd server && npm run seed"
-
   },
   "repository": {
     "type": "git",

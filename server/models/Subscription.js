@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const dateFormat = require('../utils/dateFormatSimple');
 
 const subscriptionSchema = new Schema(
     {
@@ -18,17 +18,31 @@ const subscriptionSchema = new Schema(
             type: Date,
             default: Date.now,
             get: timestamp => dateFormat(timestamp)
+        },
+        addDate: {
+            type: Date,
+            default: Date.now,
+            get: timestamp => dateFormat(timestamp)
         }
     
     },
     {
         toJSON: {
-            getters: true
+            getters: true,
+            virtuals: true
         }
     }
 );
 
 
+<<<<<<< HEAD
+=======
+// subscriptionSchema.virtual('total').get(function() {
+//     return this.amount.reduce((acc, doc) => acc + doc.points, 0);
+// });
+
+
+>>>>>>> 39559fce7f2cc6d4da65293d854f38cf1d22fe34
 const Subscription= model('Subscription', subscriptionSchema);
 
 module.exports = Subscription;
