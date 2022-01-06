@@ -14,6 +14,7 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import AddSub from './pages/AddSub';
 import SubInfo from './pages/SubInfo/SubInfo'
+import Landing from './pages/LandingPage/LandingPage';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,22 +37,23 @@ const client = new ApolloClient({
 
 function App() {
 
- 
+
 
   return (
-    
+
     <ApolloProvider client={client}>
 
       <Router forceRefresh={true}>
         <div className="">
 
-          
+
 
           <div className="">
             <Switch>
-            
 
-              <Route  exact path="/" component={Home} />
+              <Route exact path="/" component={Landing} />
+
+              <Route exact path="/home" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/addsub" component={AddSub} />
