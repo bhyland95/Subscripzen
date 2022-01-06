@@ -24,6 +24,10 @@
     "concurrently": "^6.5.1"
   },
   "dependencies": {
+<<<<<<< HEAD
     "date-fns": "^2.28.0"
+=======
+    "moment": "^2.29.1"
+>>>>>>> d208b3ae1bc276c05c8c68495e45af61317bdc54
   }
 }

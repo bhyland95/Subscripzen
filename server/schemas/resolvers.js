@@ -82,6 +82,18 @@ const resolvers = {
       
             return await Subscription.findByIdAndUpdate(_id, { name, amount, nextCharge }, { new: true });
           },
+
+          removeSubscription: async (parent, {_id}, context) => {
+            if (context.user) {
+                const user = await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { subscriptions:{_id}} },
+                    { new: true }
+                );
+
+                return user;
+            }
+        },
        
     }
 };
