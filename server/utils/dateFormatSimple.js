@@ -46,10 +46,7 @@ module.exports = (
         : dateObj.getDate();
 
     const year = dateObj.getFullYear();
-    let hour =
-        dateObj.getHours() > 12
-            ? Math.floor(dateObj.getHours() / 2)
-            : dateObj.getHours();
+    
 
  
 

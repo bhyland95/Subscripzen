@@ -1,0 +1,49 @@
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.addSubContainer{
+    position: absolute;
+    width: 94%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.514);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+
+.form-input2 {
+    background: transparent;
+    position: relative;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.form-input[type="submit"]{
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+}

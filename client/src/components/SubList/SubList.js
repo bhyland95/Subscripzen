@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import dateFormat from '../../utils/dateFormat'
 import { UPDATE_SUB } from '../../utils/mutations';
@@ -45,7 +45,8 @@ const SubList = ({ subscriptions }) => {
 
 
 
-
+  useEffect(()=>console.log(subscriptions),[subscriptions])
+  
 
   if (!subscriptions.length) {
     return <p>No Subscriptions Yet</p>;
@@ -60,7 +61,7 @@ const SubList = ({ subscriptions }) => {
             <div key={subscription._id} className='sublistContainer' >
               <p className='subscriptionName'>{subscription.name}</p>
               <p className='subscriptionAmount'>${subscription.amount}</p>
-              <p className='subscriptionDate'>{subscription.nextCharge}</p>
+              <p className='subscriptionDate'>{dateFormat(subscription.nextCharge)}</p>
             </div>
           </Link>
         ))

@@ -31,7 +31,7 @@ const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <Link to="/addsub">
+                            <Link to="/sublist">
                                 <div className='circle'>
 
                                     <FontAwesomeIcon className="NavItem" icon={faPlus} />

@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormatSimple');
+const dateFormat = require('../utils/dateFormat');
 
 const subscriptionSchema = new Schema(
     {
@@ -15,9 +15,9 @@ const subscriptionSchema = new Schema(
             required: true
         },
         nextCharge: {
-            type: Date,
-            default: Date.now,
-            get: timestamp => dateFormat(timestamp)
+            type: String,
+            default: "1/1/2022"
+          
         },
         addDate: {
             type: Date,

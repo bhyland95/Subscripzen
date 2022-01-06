@@ -65,6 +65,8 @@ const resolvers = {
             if (context.user) {
                 const subscription = await Subscription.create({ ...args, username: context.user.username });
 
+                console.log(subscription)
+
                 await User.findByIdAndUpdate(
                     { _id: context.user._id },
                     { $push: { subscriptions: subscription } },
