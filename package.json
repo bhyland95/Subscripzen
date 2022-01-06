@@ -1,5 +1,5 @@
 {
-  "name": "project3",
+  "name": "subscripzen",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bhyland95/Project3.git"
+    "url": "git+https://github.com/bhyland95/Subscripzen.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bhyland95/Project3/issues"
+    "url": "https://github.com/bhyland95/Subscripzen/issues"
   },
-  "homepage": "https://github.com/bhyland95/Project3#readme",
+  "homepage": "https://github.com/bhyland95/Subscripzen#readme",
   "devDependencies": {
     "concurrently": "^6.5.1"
   },

@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-<<<<<<< HEAD
-import Header from '../../components/Header'
-=======
 import './Login.css'
->>>>>>> Testing
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -46,41 +42,6 @@ const Login = (props) => {
   };
 
   return (
-<<<<<<< HEAD
-
-    <main className='loginPage'>
-      <Header />
-      <div className=''>
-        <div className=''>
-
-          <div className='centerdiv'>
-            <h4 className=''>Login</h4>
-            <form onSubmit={handleFormSubmit} className="center">
-              <input
-                className='form-input'
-                placeholder='Email'
-
-                value={formState.email}
-                onChange={handleChange}
-              />
-              <input
-                className='form-input'
-                placeholder='Password'
-
-                value={formState.password}
-                onChange={handleChange}
-              />
-              <button className='form-input' type='submit'>
-                Submit
-              </button>
-            </form>
-            {error && <div>Login failed</div>}
-          </div>
-        </div>
-      </div>
-
-
-=======
     <main className='loginBox'>
       <div className='square-login'></div>
       <div className='square-login'></div>
@@ -123,7 +84,6 @@ const Login = (props) => {
         </form>
         {error && <div>Login failed</div>}
       </div>
->>>>>>> Testing
     </main>
   );
 };

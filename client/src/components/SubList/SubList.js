@@ -49,7 +49,7 @@ const SubList = ({ subscriptions }) => {
   
 
   if (!subscriptions.length) {
-    return <p>No Subscriptions Yet</p>;
+    return null
   }
 
   return (
