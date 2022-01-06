@@ -5,7 +5,7 @@
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
 section {
     display: flex;
@@ -90,8 +90,6 @@ section {
     top: 170px;
     width:200px;
     z-index: 2;
-    
-    
 }
 
 
@@ -101,7 +99,7 @@ section {
     transform: translateX(-50%);
     top: 225px;
     
-    width:100%;
+    width:98%;
     min-width: 330px;
     height: 66%;
     max-width: 900px;
@@ -129,7 +127,7 @@ section {
     border-left: 1px solid rgba(255,255,255,0.2);
     z-index: 0;
     backdrop-filter: blur(10px);
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
 }
 
 .square:nth-child(1) {

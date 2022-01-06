@@ -11,7 +11,7 @@ import Home from './pages/Home/Home';
 
 
 import Login from './pages/Login/Login';
-import Signup from './pages/Signup';
+import Signup from './pages/Signup/Signup';
 import AddSub from './pages/AddSub';
 import SubInfo from './pages/SubInfo/SubInfo'
 

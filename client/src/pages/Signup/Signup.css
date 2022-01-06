@@ -7,7 +7,7 @@
 
 @media only screen and (max-width: 600px) {
 
-.loginBox{
+.signupBox{
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -24,7 +24,7 @@
     
         position: absolute;
         width: 94%;
-        height: 50%;
+        height: 55%;
         background: rgba(255, 255, 255, 0.514);
         box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         border-radius: 20px;
@@ -42,14 +42,14 @@
     
 }
 
-.login-form {
+.signup-form {
     text-align: center;
     position: relative;
     padding: 3em;
     height: 100%;
 }
 
-.login-form h2 {
+.signup-form h2 {
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 50px;
@@ -161,15 +161,14 @@
 
 }
 
-
 @keyframes 
 
 animate {
     0%,100%{
-        transform: translateY(-140px);
+        transform: translateY(-100px);
     }
     50% {
-        transform: translateY(140px);
+        transform: translateY(100px);
     }
 }
 

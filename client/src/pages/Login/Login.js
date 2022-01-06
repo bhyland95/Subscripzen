@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
+import './Login.css'
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -18,7 +19,7 @@ const Login = (props) => {
     });
   };
 
- 
+
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -41,40 +42,48 @@ const Login = (props) => {
   };
 
   return (
-    <main className='loginId'>
-      <div >
-        <div className='card'>
-          <h4 className='card-header'>Login</h4>
-          <div className='card-body'>
-            <form onSubmit={handleFormSubmit}>
-              <input
-                className='form-input'
-                placeholder='Email'
-                name='email'
-                type='email'
-                id='email'
-                value={formState.email}
-                onChange={handleChange}
-              />
-              <input
-                className='form-input'
-                placeholder='Password'
-                name='password'
-                type='password'
-                id='password'
-                value={formState.password}
-                onChange={handleChange}
-              />
-              <button className='btn d-block w-100' type='submit'>
-                Submit
-              </button>
-            </form>
-            {error && <div>Login failed</div>}
-          </div>
-        </div>
-      </div>
+    <main className='loginBox'>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+      <div className='square-login'></div>
+
 
       
+      <div className='card-body'>
+     
+
+        <form className='login-form' onSubmit={handleFormSubmit}>
+
+          <h2> Welcome </h2>
+
+          <input
+            className='form-input'
+            placeholder='Email'
+            name='email'
+            type='email'
+            id='email'
+            value={formState.email}
+            onChange={handleChange}
+          />
+          <input
+            className='form-input'
+            placeholder='Password'
+            name='password'
+            type='password'
+            id='password'
+            value={formState.password}
+            onChange={handleChange}
+          />
+          <button className='form-input' type='submit'>
+            Submit
+          </button>
+        </form>
+        {error && <div>Login failed</div>}
+      </div>
     </main>
   );
 };
