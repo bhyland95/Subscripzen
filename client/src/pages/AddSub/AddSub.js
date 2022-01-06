@@ -19,7 +19,7 @@ const AddSub = () => {
     let query = useQuery()
 
     let test2 = query?.get("amount")
-    console.log( parseInt(test2))
+    console.log( (parseInt(test2)))
 
     const [formState, setFormState] = useState({ name: query?.get("name"), amount: test2, nextCharge: '1/1/2022' });
 
