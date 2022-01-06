@@ -8,7 +8,7 @@ const Subscription = () => {
     loadSubscription();
     expoMailer();
 
-    // loadSubscriptions() // this would have loaded the subscriptions
+   // this would have loaded the subscriptions
   }, []);
 
   const handleOpen = () => {
