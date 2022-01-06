@@ -48,7 +48,7 @@ const SubList = ({ subscriptions }) => {
 
 
   if (!subscriptions.length) {
-    return <h3>No Subscriptions Yet</h3>;
+    return <p>No Subscriptions Yet</p>;
   }
 
   return (

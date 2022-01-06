@@ -50,7 +50,7 @@ const AddSub = () => {
             });
 
             setFormState('','','')
-            window.location.assign('/')
+            window.location.assign('/home')
         } catch (e) {
             console.error(e);
         }

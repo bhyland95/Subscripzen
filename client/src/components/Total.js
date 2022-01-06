@@ -8,7 +8,7 @@ const total = ({ subscriptions }) => {
     const totalAmount = subscriptions.map(subscription => subscription.amount).reduce((prev, curr) => prev + curr, 0 ).toFixed(2);;
 
   if (!subscriptions.length) {
-    return <h3>0</h3>;
+    return <p>0</p>;
   }
 
   return (

@@ -31,8 +31,11 @@ const Home = () => {
 
                 <div className='headerContainer'>
 
-
+                {loggedIn && userData ? (
                     <Header />
+                ): null}
+
+
                     {loggedIn && userData ? (
                         <div className='totalContainer'>
                             <h2 >Monthly Total:
@@ -42,9 +45,7 @@ const Home = () => {
                             </h2>
 
                         </div>
-                    ) : <div>
-                        <h3>Login to get started!</h3>
-                    </div>}
+                    ) : null}
 
                     <img className='logo' src={logo2} />
 
