@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) { */
 
 header {
     position: fixed;
@@ -67,4 +67,4 @@ header ul li {
     color: black;
 }
 
-}
+/* } */
