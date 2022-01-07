@@ -19,7 +19,7 @@ const AddSub = () => {
     let query = useQuery()
 
     let test2 = query?.get("amount")
-    console.log( (parseInt(test2)))
+    test2 = parseFloat(test2)
 
     const [formState, setFormState] = useState({ name: query?.get("name"), amount: test2, nextCharge: '1/1/2022' });
 
@@ -103,7 +103,8 @@ const AddSub = () => {
                         className='form-input2'
                         placeholder='Subscription Amount'
                         name='amount'
-                        type='amount'
+                        type="number" 
+                        
                         id='amount'
                         value={formState.amount}
                         onChange={handleChange}

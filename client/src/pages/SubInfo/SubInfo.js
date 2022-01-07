@@ -37,6 +37,49 @@ const SubInfo = () => {
     })
     window.location.replace("/home")
   }
+
+  let test = DateFormat(subscription.addDate)
+  console.log(test)
+  console.log(subscription)
+  let today = new Date(subscription.nextCharge)
+  let today2 = new Date()
+
+  let year = today.getFullYear()
+  let month = (today.getMonth()) + 1
+  if (month < 10) {
+      month = '0' + month
+  }
+  let day = today.getDate()
+  if (day < 10) {
+      day = '0' + day
+  }
+  let year2 = today2.getFullYear()
+  let month2 = (today2.getMonth()) + 1
+  if (month2 < 10) {
+      month2 = '0' + month2
+  }
+  let day2 = today2.getDate()
+  if (day2 < 10) {
+      day2 = '0' + day2
+  }
+  let dt1 = month + '/' + day + '/' + year
+  let dt2 = month2 + '/' + day2 + '/' + year2
+
+  console.log(dt1,dt2)
+
+
+  // const date1 = new Date(subscription.nextCharge);
+  // const date2 = new Date(subscription.addDate);
+  // const diffTime = Math.abs(date2 - date1);
+  // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+  // console.log(diffTime + " milliseconds");
+  // console.log(diffDays + " days");
+  
+
+
+
+
+
   return (
     <section>
       <div className='square-login'></div>

@@ -52,7 +52,7 @@
 .login-form h2 {
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
 }
 
@@ -86,6 +86,14 @@
     z-index: 0;
     backdrop-filter: blur(10px);
     animation: animate 34s linear infinite;
+}
+
+.signupInstead {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: black;
+    font-size: 12px;
 }
 
 .square-login:nth-child(1) {

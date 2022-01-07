@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import './Login.css'
+import { Link } from 'react-router-dom';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -83,6 +84,11 @@ const Login = (props) => {
           </button>
         </form>
         {error && <div>Login failed</div>}
+        <Link to='/signup'>
+                <p className='signupInstead' >
+                    Sign Up Instead
+                </p>
+            </Link>
       </div>
     </main>
   );

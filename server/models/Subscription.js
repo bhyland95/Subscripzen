@@ -22,7 +22,7 @@ const subscriptionSchema = new Schema(
         addDate: {
             type: Date,
             default: Date.now,
-            get: timestamp => dateFormat(timestamp)
+            
         }
     
     },

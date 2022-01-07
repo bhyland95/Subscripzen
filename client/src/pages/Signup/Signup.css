@@ -52,7 +52,7 @@
 .signup-form h2 {
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 
 }
 
@@ -88,20 +88,12 @@
     animation: animate 34s linear infinite;
 }
 
-.test {
+.loginInstead {
     position: absolute;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
-    background: rgba(255, 255, 255, 0.055);
-    border: 1px solid rgba(255, 255, 255, 0.377);
-    border-top: 1px solid rgba(255,255,255,0.2);
-    border-left: 1px solid rgba(255,255,255,0.2);
-    z-index: 0;
-    backdrop-filter: blur(10px);
-    animation-name: animation2;
-    animation-duration: 10s;
-    animation-direction: linear;
-    z-index: -1;
+    bottom: 2%;
+    left: 5%;
+    color: black;
+    font-size: 12px;
 }
 
 .square-login:nth-child(1) {
