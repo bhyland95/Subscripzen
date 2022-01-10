@@ -25,6 +25,8 @@ The app is currently only designed to look good on mobile. We are working on des
   
  Login and hit the add button at the bottom to add a subscription! Click on the subscription from the home screen to view information about it and delete it. 
  
+ You can visit the working application by clicking here: 
+ 
  
  ![Capture](https://user-images.githubusercontent.com/84405590/148614799-3c60abc0-6ad8-4810-912f-b29d7553f382.PNG)
 ![Capture2](https://user-images.githubusercontent.com/84405590/148614807-3c9bcdaf-bc58-480e-92aa-155f50054cfd.PNG)
