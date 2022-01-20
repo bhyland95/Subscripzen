@@ -28,10 +28,10 @@ The app is currently only designed to look good on mobile. We are working on des
  You can visit the working application by clicking here: https://peaceful-gorge-13766.herokuapp.com/
  (Resize to mobile Iphone view for best results)
  
- 
- ![Capture](https://user-images.githubusercontent.com/84405590/148614799-3c60abc0-6ad8-4810-912f-b29d7553f382.PNG)
-![Capture2](https://user-images.githubusercontent.com/84405590/148614807-3c9bcdaf-bc58-480e-92aa-155f50054cfd.PNG)
-![Capture3](https://user-images.githubusercontent.com/84405590/148614808-24fcf069-18c3-428a-991a-5c46340b93f9.PNG)
+![LandingPage](https://user-images.githubusercontent.com/84405590/150404485-7d211933-623e-48e8-8328-4d41644756d8.png)
+![HomePage](https://user-images.githubusercontent.com/84405590/150404496-80cdb60d-0c8e-4ec6-b4a7-a8353a2563a6.png)
+![AddSub](https://user-images.githubusercontent.com/84405590/150404510-4cbbb5a0-d289-457a-a853-8acadd0ccf84.png)
+
 
 
   
